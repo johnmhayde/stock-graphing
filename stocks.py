@@ -24,14 +24,6 @@ for i in range(0, numElements):
 # pull data from yfinance
 data = yf.download("GOOGL", start=startDate, end=endDate, group_by="ticker");
 
-print(data);
+closedStocks = data.loc[:,"Close"].copy();
 
-# for i in range(0, data[stocks[0]]['Adj Close'].size):
-# 	#line = str(element).split();
-# 	print(data[stocks[0]]['Adj Close'][i]);
-
-# # pull info from data for specific stock
-# for i in range(0, numElements):
-# 	y[i] = data[stocks[0]]['Adj Close'][i];
-
-# print(y);
+print(closedStocks)
